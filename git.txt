@@ -1,0 +1,232 @@
+chmod: changing permissions of '/dev/shm': Permission denied
+chmod: changing permissions of '/dev/mqueue': Permission denied
+ln: failed to create symbolic link '/etc/mtab': Permission denied
+'C:\WINDOWS\system32\drivers\etc\hosts' -> '/etc/hosts'
+/usr/bin/cp: cannot create regular file '/etc/hosts': Permission denied
+'C:\WINDOWS\system32\drivers\etc\protocol' -> '/etc/protocols'
+/usr/bin/cp: cannot create regular file '/etc/protocols': Permission denied
+'C:\WINDOWS\system32\drivers\etc\services' -> '/etc/services'
+/usr/bin/cp: cannot create regular file '/etc/services': Permission denied
+'C:\WINDOWS\system32\drivers\etc\networks' -> '/etc/networks'
+/usr/bin/cp: cannot create regular file '/etc/networks': Permission denied
+rm: cannot remove '/etc/post-install/01-devices.post': Permission denied
+rm: cannot remove '/etc/post-install/03-mtab.post': Permission denied
+rm: cannot remove '/etc/post-install/06-windows-files.post': Permission denied
+rm: cannot remove '/etc/post-install/99-post-install-cleanup.post': Permission denied
+
+admin@DESKTOP-116P4AS MINGW64 ~
+$ cd test
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ pwd
+/c/Users/admin/test
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        niraj.html
+        nrj.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git config user.email
+DK0033@digikull.com
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git config user.name
+nirajsakhare0033
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        niraj.html
+        nrj.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git add nrj.html
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   nrj.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        niraj.html
+
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git add niraj.html
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   niraj.html
+        new file:   nrj.html
+
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git commit -m "added niraj.html nrj.html"
+[master 3784f0e] added niraj.html nrj.html
+ 2 files changed, 10 insertions(+)
+ create mode 100644 niraj.html
+ create mode 100644 nrj.html
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git push
+To https://github.com/digikull/test.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/digikull/test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 911 bytes | 0 bytes/s, done.
+From https://github.com/digikull/test
+ + 9fa61e1...355908a master     -> origin/master  (forced update)
+ * [new branch]      htmlTables -> origin/htmlTables
+Auto-merging git.html
+CONFLICT (content): Merge conflict in git.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git push
+To https://github.com/digikull/test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/digikull/test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git push
+To https://github.com/digikull/test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/digikull/test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git init
+Reinitialized existing Git repository in C:/Users/admin/test/.git/
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git push
+To https://github.com/digikull/test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/digikull/test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git push
+To https://github.com/digikull/test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/digikull/test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git push
+To https://github.com/digikull/test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/digikull/test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 28 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   git.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git add git.html
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 28 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   git.html
+
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master|MERGING)
+$ git commit -m "added git.html"
+[master a470faf] added git.html
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 29 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$ git push
+Enumerating objects: 85, done.
+Counting objects: 100% (85/85), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (78/78), done.
+Writing objects: 100% (80/80), 8.52 KiB | 235.00 KiB/s, done.
+Total 80 (delta 28), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (28/28), completed with 1 local object.
+To https://github.com/digikull/test.git
+   355908a..a470faf  master -> master
+
+admin@DESKTOP-116P4AS MINGW64 ~/test (master)
+$
